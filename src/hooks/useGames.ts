@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
-import { FetchGamesResponse, Game } from "../components/GameGrid";
 import apiClient from "../services/api_key";
 import { CanceledError } from "axios";
+export interface Game {
+    id: number;
+    name: string;
+    background_image: string;
+}
 
+export interface FetchGamesResponse {
+    count: number;
+    results: Game[];
+}
 const useGames = () => {
     const [games, setGames] = useState<Game[]>([]);
     const [error, setError] = useState("");
