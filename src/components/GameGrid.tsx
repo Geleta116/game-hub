@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
 import { SimpleGrid, Text } from "@chakra-ui/react";
-import useGames, { Game, Platform } from "../hooks/useGames";
+import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import GameCardContainer from "./GameCardContainer";
-import useData from "../hooks/useData";
-import { Genre } from "../hooks/useGenres";
 import { GameQuery } from "../App";
 
 interface Props {
@@ -24,7 +21,7 @@ const GameGrid = ({ gameQuery }: Props) => {
         md: 2,
         lg: 3,
         xl: 4,
-      }} 
+      }}
       spacing={6}
       padding={10}
     >
